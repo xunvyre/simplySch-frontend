@@ -170,3 +170,62 @@ header div
 {
     color: white;
 }
+
+@media screen and (max-width: 856px)
+{
+    .main-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    header
+    {
+        background-color: grey;
+        width: 100vw;
+        height: 15vh;
+    }
+
+    header div
+    {
+        text-align: center;
+        color: white;
+        margin-top: 1.5vh;
+        height: fit-content;
+    }
+
+    .arrow:before
+    {
+        bottom: 0px;
+        right: 0px;
+        border-width: 0px 0px 10vw 100vw;
+        border-color: rgba(255,255,255) transparent rgba(255,255,255) transparent;
+    }
+      
+    .arrow:after
+    {
+        bottom: 0px;
+        left: 0px;
+        border-width: 0 100vw 10vw 0;
+        border-color: rgba(255,255,255) transparent rgba(255,255,255) transparent;
+    }
+
+    .title
+    {
+        font-size: 10vw;
+    }
+
+    .subtitle
+    {
+        font-size: 5vw;
+    }
+
+    .form-title
+    {
+        font-size: 3vh;
+    }
+
+    .inputs label
+    {
+        font-size: 2vh;
+    }
+}
