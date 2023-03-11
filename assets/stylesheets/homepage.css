@@ -1,0 +1,418 @@
+/*--------general styles*/
+
+*
+{
+    padding: 0px;
+    margin: auto auto;
+}
+
+:root
+{
+    --blue: lightskyblue;
+
+    --weight: 400;
+
+    --click-transition: all 400ms ease;
+}
+
+/*--------body styles*/
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+h3
+{
+    color: white;
+    font-size: 2vw;
+    font-weight: var(--weight);
+}
+
+.text-box
+{
+    background-color: white;
+    border-radius: 12px;
+}
+
+/*---------nav styles*/
+
+nav
+{
+    background-color: grey;
+    height: 100vh;
+}
+
+.nav-header
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 2vw;
+    color: white;
+    text-align: center;
+}
+
+.nav-header div h2
+{
+    font-size: 4vw;
+    font-weight: var(--weight);
+}
+
+.company-info-box
+{
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.company-info-box h3
+{
+    margin: 1vh 0.5vw;
+}
+
+.company-info-box ul li
+{
+    list-style-type: none;
+    background-color: white;
+    border-radius: 15px;
+    margin: 1vh 1vw;
+    padding: 0.5vh;
+}
+
+.company-info-box ul li h4, .employee-info ul li p
+{
+    color: grey;
+    font-size: 1.5vw;
+    font-weight: var(--weight);
+}
+
+.employee-profile
+{
+    padding: 1vw;
+}
+
+.profile-header
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3px;
+    width: fit-content;   
+}
+
+.profile-header img
+{
+    width: 25px;
+}
+
+.stat-grid
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0.75vw;
+    margin: 1vh 0;
+}
+
+.stat-grid .text-box
+{
+    height: 100%;
+    width: 100%;
+}
+
+.stat-text
+{
+    padding: 5px;
+    color: grey;
+}
+
+.small-cal-header
+{
+    height: fit-content;
+    width: 100%;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 12px 12px 0 0;
+}
+
+.small-cal-header p
+{
+    padding: 5px;
+    text-align: center;
+}
+
+.bold-date
+{
+    font-size: 1.5vw;
+    text-align: center;
+    color: grey;
+    margin: 5px;
+}
+
+.employee-info
+{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.employee-info ul
+{
+    list-style-type: none;
+    padding: 0.5vh;
+}
+
+/*--------main styles*/
+
+main
+{
+    height: 100vh;
+    width: 100%;
+}
+
+/*header styles*/
+
+header
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header h1
+{
+    width: 100%;
+    font-size: 5vw;
+    color: grey;
+    margin-left: 1vw;
+}
+
+header h1 span
+{
+    color: var(--blue);
+}
+
+header div
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5vw;
+}
+
+header div a
+{
+    width: 100%;
+}
+
+header div button
+{
+    border: none;
+    width: 100%;
+    border-radius: 12px;
+    padding: 1vh 1.5vw;
+    background-color: var(--blue);
+    color: white;
+    font-size: 1.5vw;
+    transition: var(--click-transition);
+}
+
+header div button:hover
+{
+    background-color: grey;
+}
+
+/*weekly schedule styles*/
+
+.schedule-info
+{
+    height: 67.5%;
+}
+
+.carousel-holder
+{
+    width: 65vw;
+    margin: 1vh 1vw;
+
+}
+
+.weekday
+{
+    background-color: grey;
+    height: 150px;
+    width: 145px;
+    border-radius: 12px;
+}
+
+.weekday-date
+{
+    background-color: var(--blue);
+    border-radius: 12px 12px 0 0;
+    padding-top: 2px;
+    width: 100%;
+    height: 20%;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.weekday-info
+{
+    margin: 0px 7px;
+    height: 110px;
+    background-color: white;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    color: grey;
+}
+
+.swiper-button-next, .swiper-button-prev
+{
+    color: var(--blue);
+}
+
+.schedule-details
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1vw;
+    height: 100%;
+}
+
+/*daily styles*/
+
+.daily-container
+{
+    background-color: grey;
+    width: 100%;
+    border-radius: 12px;
+    margin: 1vh 1vw;
+}
+
+.daily-date
+{
+    background-color: var(--blue);
+    border-radius: 12px 12px 0 0;
+    padding: 5px 0;
+    width: 100%;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.daily-info
+{
+    background-color: white;
+    margin: 0px 10px 10px 10px;
+    padding: 2px 4px;
+    border-radius: 0 0 12px 12px;
+    color: grey;
+}
+
+.shift-item
+{
+    border-bottom: 2px solid grey;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1vh 1vw;
+}
+
+.shift-item:last-child
+{
+    border-bottom: none;
+}
+
+.scroll
+{
+    overflow-y: scroll;
+    height: 100%;
+}
+
+/*monthly styles*/
+
+.calendar
+{
+    background-color: grey;
+    width: 95.75%;
+    border-radius: 12px;
+    margin: 1vh 1vw;
+}
+
+.calendar-header
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    background-color: var(--blue);
+    border-radius: 12px 12px 0 0;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 2vw;
+    color: white;
+    text-align: center;
+}
+
+.arrow
+{
+    border: solid grey;
+    height: 10px;
+    width: 10px;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right
+{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+  
+.left
+{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.calendar-body
+{
+    background-color: white;
+    border-radius: 0 0 12px 12px;
+    margin: 0px 10px 10px 10px;
+    padding: 2px 10px 10px 10px;
+}
+
+.week-header
+{
+    border-bottom: 2px solid grey;
+    padding: 4px 0px;
+}
+
+.week-header th h4
+{
+    color: grey;
+    font-weight: var(--weight);
+    font-size: 16px;
+}
+
+.calendar-body tr td
+{
+    height: 9vh;
+    width: 9vh;
+    border: 2px solid grey;
+    padding: 1px;
+    margin: 1px;
+}
