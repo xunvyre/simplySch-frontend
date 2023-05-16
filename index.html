@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/stylesheets/login.css" />
 
     <title>SimplySchedule</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/ssfavicon.png" />
 
 </head>
 <body class="main-grid">
@@ -25,7 +26,7 @@
                 <h2 class="form-title">Your week, simplified.</h2>
                 <form>
                     <div class="inputs">
-
+                        <!--IDs are already set, change as needed.-->
                         <label for="email">Email:</label>
                         <input type="email" id="email" placeholder="you@example.com" />
                         
@@ -34,8 +35,9 @@
 
                     </div>
                     <div class="actions">
+                        
                         <button type="submit">Log In</button>
-                        <p><a href="/">New user? Click here to set a password.</a></p>
+                        <p><a href="/">New user? Click here to set a password.</a></p> <!--Not functional yet, unsure of user flow. Better to take to new page and reload, or populate sign in with new textareas? Either way a reload is needed afaik, and right now it's coded as a link to a new page.-->
                     </div>
                 </form>
             </div>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/stylesheets/admin.css"/>
+
+    <title>SimplySchedule</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/ssfavicon.png"/>
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-header">
+            <a href= '/'><img src="./assets/images/denuccis_small_print.png" style="width: 100px;"/></a>
+            <div>
+                <h2>Firstname</h2>
+                <p>employee.role at company.name</p>
+            </div>
+        </div>
+        <div class="company-info-box">
+            <h3>company.name Contact Information</h3>
+            <ul>
+                <li>
+                    <h4>company.address</h4>
+                </li>
+                <li>
+                    <h4>company.email</h4>
+                </li>
+                <li>
+                    <h4>company.phone</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="employee-profile">
+            <div class="profile-header">
+                <!--<a href='/'><img src="./assets/images/denuccis_small_print.png"/></a>-->
+                <h3>My Profile</h3>
+            </div>
+            <div class="profile-body">
+                <div class="stat-grid">
+                    <div class="text-box">
+                        <p class="stat-text">Based on your current information, you are available for XX out of YY shifts per week. You are currently scheduled for a total of ZZ shifts as of (last update).</p>
+                    </div>
+                    <div class="text-box">
+                        <div class="small-cal-header">
+                            <p>Employee Since</p>
+                        </div>
+                        <div class="bold-date">
+                            <h2>01/01</h2>
+                            <h2>2023</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-box employee-info">
+                    <ul>
+                        <li>
+                            <p>Name: employee.firstname employee.lastname</p>
+                        </li>
+                        <li>
+                            <p>Email: employee.email</p>
+                        </li>
+                        <li>
+                            <p>Phone: employee.phone</p>
+                        </li>
+                        <li>
+                            <p>Address: 1234 Lane Drive, Fernandina Beach, FL, 12345</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="schedule-info">
+        <div class="swiper mySwiper carousel-holder">
+            <div class="swiper-wrapper carousel">
+                <div class="swiper-slide weekday">
+                    <div class="weekday-date">
+                        <p>01/01</p>
+                    </div>
+                    <div class="weekday-info">
+                        <p>Closed</p>
+                    </div>
+                </div>
+                <div class="swiper-slide weekday">
+                    <div class="weekday-date">
+                        <p>01/02</p>
+                    </div>
+                    <div class="weekday-info">
+                        <p>Time Off: All Day</p>
+                    </div>
+                </div>
+                <div class="swiper-slide weekday">
+                    <div class="weekday-date">
+                        <p>01/03</p>
+                    </div>
+                    <div class="weekday-info">
+                        <p>1:00pm - 9:00pm</p>
+                    </div>
+                </div>
+                <div class="swiper-slide weekday">
+                    <div class="weekday-date">
+                        <p>01/04</p>
+                    </div>
+                    <div class="weekday-info">
+                        <p>1:00pm - 9:00pm</p>
+                    </div>
+                </div>
+                <div class="swiper-slide weekday">
+                    <div class="weekday-date">
+                        <p>01/05</p>
+                    </div>
+                    <div class="weekday-info">
+                        <p>1:00pm - 9:00pm</p>
+                    </div>
+                </div>
+                <div class="swiper-slide weekday">
+                    <div class="weekday-date">
+                        <p>01/06</p>
+                    </div>
+                    <div class="weekday-info">
+                        <p>10:00am - 4:00pm and 6:00pm - 8:00pm</p>
+                    </div>
+                </div>
+                <div class="swiper-slide weekday">
+                    <div class="weekday-date">
+                        <p>01/07</p>
+                    </div>
+                    <div class="weekday-info">
+                        <p>Not Scheduled</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper",
+        {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            navigation:
+            {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
+    </script>
+</body>
+</html>

@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="./assets/stylesheets/homepage.css" />
     
         <title>SimplySchedule</title>
+        <link rel="icon" type="image/x-icon" href="./assets/images/ssfavicon.png" />
     
     </head>
 <body class="main-grid">
@@ -44,6 +45,7 @@
             <div class="profile-body">
                 <div class="stat-grid">
                     <div class="text-box">
+                        <!--This can be whatever information you see fit, I think we had discussed what statistics the DB was capable of before.-->
                         <p class="stat-text">Based on your current information, you are available for XX out of YY shifts per week. You are currently scheduled for a total of ZZ shifts as of (last update).</p>
                     </div>
                     <div class="text-box">
@@ -51,6 +53,7 @@
                             <p>Employee Since</p>
                         </div>
                         <div class="bold-date">
+                            <!--Let me know if this format doesn't work, I can give it a custom style instead.-->
                             <h2>01/01</h2>
                             <h2>2023</h2>
                         </div>
@@ -80,10 +83,12 @@
         <header>
             <h1><span>My</span>Schedule</h1>
             <div>
+                <!--Pages in development.-->
                 <a href='/'><button>Requests</button></a>
                 <a href='/'><button>About</button></a>
             </div>
         </header>
+        <!--This is hardcoded right now for viewing purposes. Current need: a way to switch between weeks (?).-->
         <div class="schedule-info">
             <div class="swiper mySwiper carousel-holder">
                 <div class="swiper-wrapper carousel">
@@ -154,7 +159,8 @@
                         <h3>date.current</h3>
                     </div>
                     <div class="daily-info">
-                        <div class="scroll">
+                        <!--Entire daily schedule, plus a list of who's available today (Homebase has this, not sure if we wanted that info available? Ask next time.)-->
+                        <div class="scroll"> <!--This needs to be tested to make sure it works.-->
                             <div class="shift-item">
                                 <div>
                                     <p>10:00am-6pm</p>
@@ -184,6 +190,7 @@
                     </div>
                 </div>
                 <div class="calendar">
+                    <!--Custom code for this section, API no longer needed (yay).-->
                     <div class="calendar-header">
                         <p><i class="arrow left"></i></p>
                         <h2>January 2023</h2>
@@ -265,6 +272,7 @@
             </div>
         </div>
     </main>
+    <!--Scripts for the carousel.-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper",
