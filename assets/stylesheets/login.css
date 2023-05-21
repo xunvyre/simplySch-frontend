@@ -100,6 +100,12 @@ header div
     padding: 30px;
 }
 
+.reg-formatting
+{
+    width: fit-content;
+    margin: 30px auto;
+}
+
 .form-title
 {
     font-size: 3vw;
@@ -168,6 +174,13 @@ header div
 
 .actions a:hover
 {
+    color: white;
+}
+
+.notice
+{
+    width: 500px;
+    padding: 0px 5px 15px 5px;
     color: white;
 }
 
