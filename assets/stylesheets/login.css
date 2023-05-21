@@ -167,12 +167,17 @@ header div
     color: white;
 }
 
-.actions a
+.formatting p
+{
+    text-align: center;
+}
+
+.formatting a
 {
     transition: all 400ms ease;
 }
 
-.actions a:hover
+.formatting a:hover
 {
     color: white;
 }
@@ -187,7 +192,6 @@ header div
 .error
 {
     font-weight: 700;
-    text-align: center;
     color: white;
 }
 
