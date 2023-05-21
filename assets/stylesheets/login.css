@@ -184,6 +184,13 @@ header div
     color: white;
 }
 
+.error
+{
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+
 @media screen and (max-width: 856px)
 {
     .main-grid
