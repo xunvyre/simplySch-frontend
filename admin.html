@@ -24,10 +24,13 @@
             <div class="admin-daily">
                 <h3 class="daily-date">Today's Schedule (07/01/2023):</h3>
                 <div class="daily-info admin-info">
-                    <!--Entire daily schedule, plus a list of who's available today.-->
+                    <!--Entire daily schedule.-->
                     <div class="shift-item">
-                        <div>
-                            <p>11:00 AM-5:00 PM</p>
+                        <div class="center-item">
+                            <h4>11:00 AM-5:00 PM</h4>
+                            <p>Clock in: 10:55 AM</p>
+                            <p>Clock out: 5:03 PM</p>
+                            <!--If there are multiple clock in and clock outs, this should just continue to populate with data in the same format (clock in, clock out, clock in, clock out)-->
                         </div>
                         <div class="center-item">
                             <h4>Bruce Wayne</h4>
@@ -35,8 +38,10 @@
                         </div>
                     </div>
                     <div class="shift-item">
-                        <div>
-                            <p>11:00 AM-5:00 PM</p>
+                        <div class="center-item">
+                            <h4>11:00 AM-5:00 PM</h4>
+                            <p>Clock in: 11:00 AM</p>
+                            <p>Clock out: 5:01 PM</p>
                         </div>
                         <div class="center-item">
                             <h4>John Smith</h4>
@@ -44,8 +49,10 @@
                         </div>
                     </div>
                     <div class="shift-item">
-                        <div>
-                            <p>11:00 AM-5:00 PM</p>
+                        <div class="center-item">
+                            <h4>11:00 AM-5:00 PM</h4>
+                            <p>Clock in: 11:00 AM</p>
+                            <p>Clock out: 5:01 PM</p>
                         </div>
                         <div class="center-item">
                             <h4>Betty White</h4>
@@ -53,8 +60,10 @@
                         </div>
                     </div>
                     <div class="shift-item">
-                        <div>
-                            <p>5:00 PM-11:00 PM</p>
+                        <div class="center-item">
+                            <h4>5:00 PM-11:00 PM</h4>
+                            <p>Clock in: 5:00 PM</p>
+                            <!--If there is no clock out information, it either means that the shift hasn't ended or the employee hasn't clocked out. Should a "Clock out: Needed/Not Logged/Other" appear after a certain amount of time, or is that not necessary?-->
                         </div>
                         <div class="center-item">
                             <h4>Rebecca Black</h4>
@@ -62,8 +71,9 @@
                         </div>
                     </div>
                     <div class="shift-item">
-                        <div>
-                            <p>5:00 PM-11:00 PM</p>
+                        <div class="center-item">
+                            <h4>5:00 PM-11:00 PM</h4>
+                            <p>Clock in: 5:00 PM</p>
                         </div>
                         <div class="center-item">
                             <h4>Betsy Smalls</h4>
@@ -71,8 +81,9 @@
                         </div>
                     </div>
                     <div class="shift-item">
-                        <div>
-                            <p>5:00 PM-11:00 PM</p>
+                        <div class="center-item">
+                            <h4>5:00 PM-11:00 PM</h4>
+                            <p>Clock in: 5:00 PM</p>
                         </div>
                         <div class="center-item">
                             <h4>Jane Doe</h4>
@@ -80,8 +91,9 @@
                         </div>
                     </div>
                     <div class="shift-item">
-                        <div>
-                            <p>5:00 PM-11:00 PM</p>
+                        <div class="center-item">
+                            <h4>5:00 PM-11:00 PM</h4>
+                            <p>Clock in: 5:00 PM</p>
                         </div>
                         <div class="center-item">
                             <h4>Mark Zuckerberg</h4>
@@ -89,8 +101,9 @@
                         </div>
                     </div>
                     <div class="shift-item">
-                        <div>
-                            <p>5:00 PM-11:00 PM</p>
+                        <div class="center-item">
+                            <h4>5:00 PM-11:00 PM</h4>
+                            <p>Clock in: 5:00 PM</p>
                         </div>
                         <div class="center-item">
                             <h4>Enlongated Muskrat</h4>
@@ -98,8 +111,9 @@
                         </div>
                     </div>
                     <div class="shift-item">
-                        <div>
-                            <p>7:00 PM-11:00 PM</p>
+                        <div class="center-item">
+                            <h4>7:00 PM-11:00 PM</h4>
+                            <p>Not Started</p> <!--Use timeclock/time intervals to go from "Not Started" (hours up to that point + grace period) to "Late" (after grace period but before end of shift) to "No Show" (shift is over with no clock in information) if possible-->
                         </div>
                         <div class="center-item">
                             <h4>Duke Luckington</h4>
@@ -108,8 +122,8 @@
                     </div>
                 </div>
                 <div class="mock-footer">
-                    <button>Log Out</button>
-                    <button>Employee Profile</button>
+                    <a href="./index.html"><button>Log Out</button></a>
+                    <a href="./main.html"><button>Employee Profile</button></a>
                 </div>
             </div>
         </header>
@@ -129,8 +143,10 @@
                             </div>
                             <div class="daily-info">
                                     <div class="shift-item">
-                                        <div>
-                                            <p>11:00 AM-5:00 PM</p>
+                                        <div class="center-item">
+                                            <h4>11:00 AM-5:00 PM</h4>
+                                            <p>Clock in: 11:00 AM</p>
+                                            <p>Clock out: 5:01 PM</p>
                                         </div>
                                         <div class="center-item">
                                             <h4>Johnson Compensation Jr</h4>
@@ -138,8 +154,10 @@
                                         </div>   
                                     </div>
                                     <div class="shift-item">
-                                        <div>
-                                            <p>11:00 AM-5:00 PM</p>
+                                        <div class="center-item">
+                                            <h4>11:00 AM-5:00 PM</h4>
+                                            <p>Clock in: 11:00 AM</p>
+                                            <p>Clock out: 5:01 PM</p>
                                         </div>
                                         <div class="center-item">
                                             <h4>Hey You</h4>
@@ -147,8 +165,10 @@
                                         </div>
                                     </div>
                                     <div class="shift-item">
-                                        <div>
-                                            <p>11:00 AM-5:00 PM</p>
+                                        <div class="center-item">
+                                            <h4>11:00 AM-5:00 PM</h4>
+                                            <p>Clock in: 11:00 AM</p>
+                                            <p>Clock out: 5:01 PM</p>
                                         </div>
                                         <div class="center-item">
                                             <h4>Snoopy Brown</h4>
@@ -157,8 +177,10 @@
                                         <div></div>
                                     </div>
                                     <div class="shift-item">
-                                        <div>
-                                            <p>11:00 AM-5:00 PM</p>
+                                        <div class="center-item">
+                                            <h4>11:00 AM-5:00 PM</h4>
+                                            <p>Clock in: 11:00 AM</p>
+                                            <p>Clock out: 5:01 PM</p>
                                         </div>
                                         <div class="center-item">
                                             <h4>Princess Cinderella</h4>
@@ -167,8 +189,10 @@
                                         <div></div>
                                     </div>
                                     <div class="shift-item">
-                                        <div>
+                                        <div class="center-item">
                                             <p>5:00 PM-11:00 PM</p>
+                                            <p>Clock in: 5:00 PM</p>
+                                            <p>Clock out: 10:47 PM</p>
                                         </div>
                                         <div class="center-item">
                                             <h4>Richard Nixon</h4>
@@ -177,8 +201,10 @@
                                         <div></div>
                                     </div>
                                     <div class="shift-item">
-                                        <div>
+                                        <div class="center-item">
                                             <p>5:00 PM-11:00 PM</p>
+                                            <p>Clock in: 5:00 PM</p>
+                                            <p>Clock out: 10:47 PM</p>
                                         </div>
                                         <div class="center-item">
                                             <h4>Darth Vader</h4>
@@ -187,8 +213,10 @@
                                         <div></div>
                                     </div>
                                     <div class="shift-item">
-                                        <div>
+                                        <div class="center-item">
                                             <p>5:00 PM-11:00 PM</p>
+                                            <p>Clock in: 5:00 PM</p>
+                                            <p>Clock out: 10:47 PM</p>
                                         </div>
                                         <div class="center-item">
                                             <h4>Steve from Blues Clues</h4>
@@ -197,8 +225,10 @@
                                         <div></div>
                                     </div>
                                     <div class="shift-item">
-                                        <div>
+                                        <div class="center-item">
                                             <p>5:00 PM-11:00 PM</p>
+                                            <p>Clock in: 5:00 PM</p>
+                                            <p>Clock out: 10:47 PM</p>
                                         </div>
                                         <div class="center-item">
                                             <h4>Captain America</h4>
@@ -207,8 +237,10 @@
                                         <div></div>
                                     </div>
                                     <div class="shift-item">
-                                        <div>
+                                        <div class="center-item">
                                             <p>5:00 PM-11:00 PM</p>
+                                            <p>Clock in: 5:00 PM</p>
+                                            <p>Clock out: 10:47 PM</p>
                                         </div>
                                         <div>
                                             <h4>Just Jimmy</h4>
@@ -217,8 +249,10 @@
                                         <div></div>
                                     </div>
                                     <div class="shift-item">
-                                        <div>
+                                        <div class="center-item">
                                             <p>5:00 PM-11:00 PM</p>
+                                            <p>Clock in: 5:00 PM</p>
+                                            <p>Clock out: 10:47 PM</p>
                                         </div>
                                         <div>
                                             <h4>Beatrice LeBeau</h4>
@@ -227,12 +261,15 @@
                                         <div></div>
                                     </div>
                                     <div class="shift-item">
-                                        <div>
+                                        <div class="center-item">
                                             <p>7:00 PM-11:00 PM</p>
+                                            <p>N/A</p>
+                                            <!--N/A if unclaimed, No Show if claimed-->
                                         </div>
-                                        <div>
+                                        <div class="center-item">
                                             <h4>Open Shift</h4>
-                                            <p></p>
+                                            <p>Unclaimed</p>
+                                            <!--If open shift is unclaimed by the end of the day, mark as such?-->
                                         </div>
                                         <div></div>
                                     </div>

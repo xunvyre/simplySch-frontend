@@ -168,6 +168,11 @@ main
     margin-top: 1vh;
 }
 
+.mock-footer a
+{
+    width: 100%;
+}
+
 .mock-footer button
 {
     border: none;
