@@ -1,0 +1,227 @@
+/*--------general styles*/
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+:root
+{
+    --blue: lightskyblue;
+
+    --weight: 400;
+
+    --click-transition: all 400ms ease;
+}
+
+ul, a, a:hover
+{
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+/*--------body styles*/
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-grid
+{
+    display: grid;
+    grid-template-columns: 50px auto;
+}
+
+/*--------nav styles*/
+
+nav
+{
+    position: fixed;
+    left: 0px;
+    height: 100vh;
+    width: 50px;
+    background-color: grey;
+    text-align: center;
+}
+
+nav ul
+{
+    margin-top: 4vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+nav ul li
+{
+    margin: 4vh 0;
+}
+
+nav ul li a
+{
+    font-size: 3vh;
+}
+
+/*--------main styles*/
+
+main
+{
+    margin-left: 50px;
+    padding: 1vh 1vw;
+}
+
+main header h1
+{
+    font-size: 5vw;
+    color: var(--blue);
+}
+
+main header h1 span
+{
+    color: grey;
+}
+
+.section-header
+{
+    background-color: grey;
+    color: white;
+    border-radius: 12px;
+    font-size: 2vw;
+    width: fit-content;
+    padding: 5px 50px 5px 10px;
+    margin: 4vh 0 1vh 0;
+}
+
+.section-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: none;
+    align-items: center;
+}
+
+.time-grid
+{
+    align-items: normal;
+}
+
+.schedule-list, .single-shift, .av-schedule, .time-grid h2, .info-list
+{
+    color: grey;
+    width: fit-content;
+}
+
+.schedule-time, .single-shift, .av-schedule h2, .time-grid h2, .info-list h2
+{
+    border-bottom: 2px solid grey;
+    margin-left: .75vw;
+}
+
+.schedule-time, .single-shift
+{
+    display: grid;
+    grid-template-columns: 50vw 250px;
+}
+
+.single-shift
+{
+    align-items: center;
+}
+
+.schedule-time h2, .single-shift h2, .av-schedule h2, .time-grid h2, .info-list h2
+{
+    padding: 10px 5px;
+    font-weight: 400;
+}
+
+.av-schedule h2
+{
+    padding-right: .75vw;
+}
+
+.weekday-buttons
+{
+    display: grid;
+    grid-template-columns: 100px 50px 100px;
+    justify-items: center;
+    align-items: center;
+}
+
+.weekday-buttons button, .single-shift button, #availability button, #time-off button, #info button
+{
+    border: none;
+    width: 100px;
+    border-radius: 12px;
+    padding: 5px 10px;
+    background-color: var(--blue);
+    color: white;
+    font-size: 24px;
+    transition: var(--click-transition);
+}
+
+.single-shift button
+{
+    width: 250px;
+}
+
+.weekday-buttons button:hover, .single-shift button:hover
+{
+    background-color: grey;
+}
+
+.active-day h2
+{
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.past-day
+{
+    opacity: 50%;
+}
+
+.past-day button
+{
+    background-color: grey;
+}
+
+.conflict
+{
+    opacity: 50%;
+}
+
+.conflict button
+{
+    background-color: grey;
+}
+
+.av-button-holder, .info-button-holder
+{
+    padding: 10px 0px 0px .75vw;
+}
+
+.av-button-holder #av-edit, .info-button-holder #info-edit
+{
+    width: 100%;
+}
+
+.time-grid .list-title
+{
+    font-weight: 600;
+    color: var(--blue);
+    border-bottom: 2px solid var(--blue);
+}
+
+.time-grid div h2
+{
+    width: 80%;
+}
+
+#time-off .request-toff
+{
+    margin: 10px 0px 0px .75vw;
+    padding: 5px 15px;
+    width: 82%;
+}

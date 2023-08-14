@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./assets/stylesheets/profile.css"/>
     
         <title>SimplySchedule</title>
         <link rel="icon" type="image/x-icon" href="./assets/images/ssfavicon.png" />
@@ -12,32 +14,166 @@
     </head>
 <body>
     <nav>
-        <p>Return to MySchedule Dashboard</p>
-        <p>Current Schedule</p>
-        <p>Available Shifts</p>
-        <p>Current Availability</p>
-        <p>Upcoming Time Off</p>
-        <p>My Information</p>
-        <p>Logout</p>
+        <ul>
+            <li>
+                <a title="Return to MySchedule Dashboard" href="./main.html">⬅</a>
+            </li>
+            <li>
+                <a title="Current Schedule" href="#schedule">📅</a>
+            </li>
+            <li>
+                <a title="Available Shifts" href="#shifts">🚩</a>
+            </li>
+            <li>
+                <a title="Current Availability" href="#availability">✔</a>
+            </li>
+            <li>
+                <a title="Time Off" href="#time-off">✈</a>
+            </li>
+            <li>
+                <a title="My Information" href="#info">📋</a>
+            </li>
+            <li>
+                <a title="Log Out" href="./index.html">❌</a>
+            </li>
+        </ul>
     </nav>
     <main>
         <header>
             <h1>Good to see you, <span>Matthew!</span></h1>
         </header>
-        <div>
-            Current Schedule
+        <div id="schedule">
+            <h2 class="section-header">This week's schedule:</h2>
+            <div class="section-grid">
+                <div class="schedule-list">
+                    <div class="schedule-time past-day">
+                        <h2>● Sunday, 07/02: 11:00 AM-5:00 PM</h2>
+                        <div class="weekday-buttons">
+                            <a href="./requests.html"><button>Cover</button></a>
+                            <h2>or</h2>
+                            <a href="./requests.html"><button>Trade</button></a>
+                        </div>
+                    </div>
+                    <div class="schedule-time past-day">
+                        <h2>● Monday, 07/03: 11:00 AM-5:00 PM</h2>
+                        <div class="weekday-buttons">
+                            <a href="./requests.html"><button>Cover</button></a>
+                            <h2>or</h2>
+                            <a href="./requests.html"><button>Trade</button></a>
+                        </div>
+                    </div>
+                    <div class="schedule-time active-day">
+                        <h2>● Tuesday, 07/04: 11:00 AM-5:00 PM</h2>
+                        <div class="weekday-buttons">
+                            <a href="./requests.html"><button>Cover</button></a>
+                            <h2>or</h2>
+                            <a href="./requests.html"><button>Trade</button></a>
+                        </div>
+                    </div>
+                    <div class="schedule-time">
+                        <h2>● Wednesday, 07/05: Unavailable</h2>
+                        <div class="weekday-buttons">
+                            <a href="./requests.html"><button>Cover</button></a>
+                            <h2>or</h2>
+                            <a href="./requests.html"><button>Trade</button></a>
+                        </div>
+                        <!--Do you think we should distinguish between types of days off? Such as: Off, Not Scheduled, Unavailable, Company Holiday-->
+                    </div>
+                    <div class="schedule-time">
+                        <h2>● Thursday, 07/06: Off</h2>
+                        <div class="weekday-buttons">
+                            <a href="./requests.html"><button>Cover</button></a>
+                            <h2>or</h2>
+                            <a href="./requests.html"><button>Trade</button></a>
+                        </div>
+                    </div>
+                    <div class="schedule-time">
+                        <h2>● Friday, 07/07: Off</h2>
+                        <div class="weekday-buttons">
+                            <a href="./requests.html"><button>Cover</button></a>
+                            <h2>or</h2>
+                            <a href="./requests.html"><button>Trade</button></a>
+                        </div>
+                    </div>
+                    <div class="schedule-time">
+                        <h2>● Saturday, 07/08: 11:00 AM-5:00 PM, 5:00 PM-11:00 PM</h2>
+                        <div class="weekday-buttons">
+                            <a href="./requests.html"><button>Cover</button></a>
+                            <h2>or</h2>
+                            <a href="./requests.html"><button>Trade</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            Available Shifts
+        <div id="shifts">
+            <h2 class="section-header">Current available shifts:</h2>
+            <div>
+                <!--Concept: each button links to an individual shift, clicking the button opens a confirmation.
+                Accepting the confirmation sends a request to admin.
+                For open shift: Send / Nevermind
+                For cover: Send / Nevermind
+                For trades: opens a modal to select a shift to trade, then Send / Nevermind -->
+                <div class="single-shift">
+                    <h2>● Thursday, 07/06: 5:00 PM-11:00 PM</h2>
+                    <button id="shift-id-1">Claim Open Shift</button>
+                </div>
+                <div class="single-shift">
+                    <h2>● Friday, 07/07: 5:00 PM-11:00 PM</h2>
+                    <button id="trade-id-1">Offer Trade</button>
+                </div>
+                <div class="single-shift">
+                    <h2>● Friday, 07/07: 5:00 PM-11:00 PM</h2>
+                    <button id="cover-id-1">Claim Cover</button>
+                </div>
+                <!--If they're already scheduled for a certain shift, add the "conflict" class and the following title to the single-shift div, and prevent button from activating-->
+                <div class="single-shift conflict" title="You're already scehduled for this shift.">
+                    <h2>● Saturday, 07/08: 11:00 AM-5:00 PM</h2>
+                    <button id="shift-id-2">Claim Open Shift</button>
+                </div>
+            </div>
         </div>
-        <div>
-            Current Availability
+        <div id="availability">
+            <h2 class="section-header">My current availability:</h2>
+            <div class="av-schedule">
+                <h2>● Sunday: All Day</h2>
+                <h2>● Monday: All Day</h2>
+                <h2>● Tuesday: All Day</h2>
+                <h2>● Wednesday: Unavailable</h2>
+                <h2>● Thursday: 5:00 PM-11:00 PM</h2>
+                <h2>● Friday: 9:00 AM-12:00 PM, 3:00 PM-11:00 PM</h2>
+                <h2>● Saturday: All Day</h2>
+                <div class="av-button-holder">
+                    <button id="av-edit">Edit</button>
+                </div>
+            </div>
         </div>
-        <div>
-            Upcoming Time Off
+        <div id="time-off">
+            <h2 class="section-header">My time off:</h2>
+            <div class="section-grid time-grid">
+                <div>
+                    <h2 class="list-title">Upcoming</h2>
+                    <h2>● Thursday, 07/06/2023</h2>
+                    <h2>● Friday, 07/07/2023</h2>
+                </div>
+                <div>
+                    <h2 class="list-title">Pending</h2>
+                    <h2>● Sunday, 12/24/2023</h2>
+                    <button class="request-toff">Request Time Off</button>
+                </div>
+            </div>
         </div>
-        <div>
-            My Information
+        <div id="info">
+            <h2 class="section-header">My personal information:</h2>
+            <div class="info-list">
+                <h2>● Name: Linkin Park</h2>
+                <h2>● Email: whowantstoknow@gmail.com</h2>
+                <h2>● Phone: 123-456-7890</h2>
+                <h2>● Address: 1234 Lane Drive, Urban City, FL, 000000</h2>
+                <div class="info-button-holder">
+                    <button id="info-edit">Edit</button>
+                </div>
+            </div>
         </div>
     </main>
 </body>
