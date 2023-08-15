@@ -19,12 +19,13 @@
 body
 {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: grey;
 }
 
 .main-grid
 {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 25% 1fr;
 }
 
 a
@@ -37,6 +38,7 @@ a:hover
 {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 h3
@@ -64,14 +66,14 @@ nav
 {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    padding: 2vw;
+    padding: 1vw;
     color: white;
     text-align: center;
 }
 
 .nav-header div h2
 {
-    font-size: 4vw;
+    font-size: 2.5vw;
     font-weight: var(--weight);
 }
 
@@ -107,17 +109,11 @@ nav
     padding: 1vw;
 }
 
-.profile-header
+.profile-button:hover
 {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3px;
-    width: fit-content;   
-}
-
-.profile-header img
-{
-    width: 25px;
+    color: grey;
+    background-color: white;
+    cursor: pointer;
 }
 
 .stat-grid
@@ -157,7 +153,7 @@ nav
 
 .bold-date
 {
-    font-size: 1.5vw;
+    font-size: 1vw;
     text-align: center;
     color: grey;
     margin: 5px;
@@ -179,11 +175,12 @@ nav
 
 main
 {
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    background-color: white;
 }
 
-/*header styles*/
+/*--------header styles*/
 
 header
 {
@@ -208,7 +205,8 @@ header div
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5vw;
+    gap: 1vw;
+    padding-left: 10vw;
 }
 
 header div a
@@ -216,12 +214,12 @@ header div a
     width: 100%;
 }
 
-header div button
+header div button, .profile-button
 {
     border: none;
     width: 100%;
     border-radius: 12px;
-    padding: 1vh 1.5vw;
+    padding: 1vh 3vw;
     background-color: var(--blue);
     color: white;
     font-size: 1.5vw;
@@ -231,27 +229,22 @@ header div button
 header div button:hover
 {
     background-color: grey;
+    cursor: pointer;
 }
 
 /*weekly schedule styles*/
 
-.schedule-info
-{
-    height: 67.5%;
-}
-
 .carousel-holder
 {
-    width: 65vw;
+    width: 72.75vw;
     margin: 1vh 1vw;
-
 }
 
 .weekday
 {
     background-color: grey;
-    height: 150px;
-    width: 145px;
+    height: 120px;
+    width: 200px;
     border-radius: 12px;
 }
 
@@ -261,7 +254,7 @@ header div button:hover
     border-radius: 12px 12px 0 0;
     padding-top: 2px;
     width: 100%;
-    height: 20%;
+    height: 25%;
     font-size: 25px;
     color: white;
     text-align: center;
@@ -270,7 +263,7 @@ header div button:hover
 .weekday-info
 {
     margin: 0px 7px;
-    height: 110px;
+    height: 80px;
     background-color: white;
     border-radius: 0 0 12px 12px;
     display: flex;
@@ -321,6 +314,8 @@ header div button:hover
     padding: 2px 4px;
     border-radius: 0 0 12px 12px;
     color: grey;
+    max-height: 475px;
+    overflow-y: auto;
 }
 
 .shift-item
@@ -336,10 +331,9 @@ header div button:hover
     border-bottom: none;
 }
 
-.scroll
+.center-item
 {
-    overflow-y: scroll;
-    height: 100%;
+    text-align: center;
 }
 
 /*monthly styles*/
@@ -373,6 +367,7 @@ header div button:hover
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 3px;
+    cursor: pointer;
 }
 
 .right
@@ -393,6 +388,9 @@ header div button:hover
     border-radius: 0 0 12px 12px;
     margin: 0px 10px 10px 10px;
     padding: 2px 10px 10px 10px;
+    min-height: 475px;
+    max-height: 476px;
+    overflow: auto;
 }
 
 .week-header
@@ -403,16 +401,54 @@ header div button:hover
 
 .week-header th h4
 {
+    width: 6vw;
     color: grey;
     font-weight: var(--weight);
     font-size: 16px;
+    margin-top: 15px;
 }
 
 .calendar-body tr td
 {
-    height: 9vh;
-    width: 9vh;
+    height: 75px;
+    width: 5vw;
     border: 2px solid grey;
-    padding: 1px;
-    margin: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.calendar-body tr td h4
+{
+    position: absolute;
+    top: 0px;
+    left: 2px;
+}
+
+.calendar-body tr td p
+{
+    margin: 2px;
+    font-size: 10px;
+}
+
+.calendar-body .av-indicator
+{
+    position: absolute;
+    bottom: 0px;
+    left: 2px;
+}
+
+.green
+{
+    color: green
+}
+
+.yellow
+{
+    color: yellow;
+}
+
+.red
+{
+    color: red;
 }

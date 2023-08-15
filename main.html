@@ -13,8 +13,9 @@
         <link rel="icon" type="image/x-icon" href="./assets/images/ssfavicon.png" />
     
     </head>
-<body class="main-grid">
-
+<body>
+<div class="main-grid">
+<!--grey sidebar-->
     <nav>
         <div class="nav-header">
             <a href= '/'><img src="./assets/images/denuccis_small_print.png" style="width: 100px;"/></a>
@@ -37,26 +38,23 @@
                 </li>
             </ul>
         </div>
+<!--employee info-->
         <div class="employee-profile">
-            <div class="profile-header">
-                <!--Needs an edit motif, leads to the editable profile page-->
-                <a href='./profile.html#info'><img src="./assets/images/denuccis_small_print.png"/></a>
-                <h3>My Profile</h3>
-            </div>
+            <a href="./profile.html"><button class="profile-button">My Profile</button></a>
             <div class="profile-body">
                 <div class="stat-grid">
                     <div class="text-box">
-                        <!--This can be whatever information you see fit, I think we had discussed what statistics the DB was capable of before.-->
-                        <p class="stat-text">Based on your current information, you are available for XX out of YY shifts per week. You are currently scheduled for a total of ZZ shifts as of (last update).</p>
+                        <p class="stat-text">
+                            You are currently scheduled for 6 shifts this week. 
+                            There are 5 open shifts to be claimed.
+                        </p>
                     </div>
                     <div class="text-box">
                         <div class="small-cal-header">
                             <p>Employee Since</p>
                         </div>
                         <div class="bold-date">
-                            <!--Let me know if this format doesn't work, I can give it a custom style instead.-->
-                            <h2>01/01</h2>
-                            <h2>2023</h2>
+                            <h2>01/01/2023</h2>
                         </div>
                     </div>
                 </div>
@@ -79,20 +77,20 @@
             </div>
         </div>
     </nav>
-
+<!--myschedule section-->
     <main>
         <header>
             <h1><span>My</span>Schedule</h1>
             <div>
-                <!--Pages in development.-->
                 <a href='./requests.html'><button>Requests</button></a>
                 <a href='./about.html'><button>About</button></a>
             </div>
         </header>
-        <!--This is hardcoded right now for viewing purposes. Current need: a way to switch between weeks (?).-->
+<!--weekly carousel-->
         <div class="schedule-info">
             <div class="swiper mySwiper carousel-holder">
                 <div class="swiper-wrapper carousel">
+<!--single slides-->
                     <div class="swiper-slide weekday">
                         <div class="weekday-date">
                             <p>01/01</p>
@@ -138,7 +136,7 @@
                             <p>01/06</p>
                         </div>
                         <div class="weekday-info">
-                            <p>10:00am - 4:00pm and 6:00pm - 8:00pm</p>
+                            <p>10:00am - 4:00pm, 6:00pm - 8:00pm</p>
                         </div>
                     </div>
                     <div class="swiper-slide weekday">
@@ -150,48 +148,155 @@
                         </div>
                     </div>
                 </div>
+<!--end of single slides-->
+<!--carousel buttons-->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
+<!--non-carousel information-->
             <div class="schedule-details">
+<!--daily information-->
                 <div class="daily-container">
                     <div class="daily-date">
                         <h3>Daily Details for</h3>
                         <h3>date.current</h3>
                     </div>
                     <div class="daily-info">
-                        <!--Entire daily schedule, plus a list of who's available today.-->
-                        <div class="scroll"> <!--This needs to be tested to make sure it works.-->
-                            <div class="shift-item">
-                                <div>
-                                    <p>10:00am-6pm</p>
-                                </div>
-                                <h4>John Smith</h4>
+                        <div class="shift-item">
+                            <div class="center-item">
+                                <h4>11:00 AM-5:00 PM</h4>
+                                <p>Clock in: 11:00 AM</p>
+                                <p>Clock out: 5:01 PM</p>
                             </div>
-                            <div class="shift-item">
-                                <div>
-                                    <p>10:00am-6pm</p>
-                                </div>
-                                <h4>John Smith</h4>
+                            <div class="center-item">
+                                <h4>Johnson Compensation Jr</h4>
+                                <p>Assistant Manager</p>
+                            </div>   
+                        </div>
+                        <div class="shift-item">
+                            <div class="center-item">
+                                <h4>11:00 AM-5:00 PM</h4>
+                                <p>Clock in: 11:00 AM</p>
+                                <p>Clock out: 5:01 PM</p>
                             </div>
-                            <div class="shift-item">
-                                <div>
-                                    <p>9:00am-3:00pm</p>
-                                    <p>4:00pm-6:00pm</p>
-                                </div>
-                                <h4>John Smith</h4>
+                            <div class="center-item">
+                                <h4>Hey You</h4>
+                                <p>Assistant Manager</p>
                             </div>
-                            <div class="shift-item">
-                                <div>
-                                    <p>10:00am-6pm</p>
-                                </div>
-                                <h4>John Smith</h4>
+                        </div>
+                        <div class="shift-item">
+                            <div class="center-item">
+                                <h4>11:00 AM-5:00 PM</h4>
+                                <p>Clock in: 11:00 AM</p>
+                                <p>Clock out: 5:01 PM</p>
                             </div>
+                            <div class="center-item">
+                                <h4>Snoopy Brown</h4>
+                                <p></p>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="shift-item">
+                            <div class="center-item">
+                                <h4>11:00 AM-5:00 PM</h4>
+                                <p>Clock in: 11:00 AM</p>
+                                <p>Clock out: 5:01 PM</p>
+                            </div>
+                            <div class="center-item">
+                                <h4>Princess Cinderella</h4>
+                                <p>Training</p>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="shift-item">
+                            <div class="center-item">
+                                <h4>5:00 PM-11:00 PM</h4>
+                                <p>Clock in: 5:00 PM</p>
+                                <p>Clock out: 10:47 PM</p>
+                            </div>
+                            <div class="center-item">
+                                <h4>Richard Nixon</h4>
+                                <p>General Manager</p>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="shift-item">
+                            <div class="center-item">
+                                <h4>5:00 PM-11:00 PM</h4>
+                                <p>Clock in: 5:00 PM</p>
+                                <p>Clock out: 10:47 PM</p>
+                            </div>
+                            <div class="center-item">
+                                <h4>Darth Vader</h4>
+                                <p>Assistant Manager</p>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="shift-item">
+                            <div class="center-item">
+                                <h4>5:00 PM-11:00 PM</h4>
+                                <p>Clock in: 5:00 PM</p>
+                                <p>Clock out: 10:47 PM</p>
+                            </div>
+                            <div class="center-item">
+                                <h4>Steve from Blues Clues</h4>
+                                <p></p>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="shift-item">
+                            <div class="center-item">
+                                <h4>5:00 PM-11:00 PM</h4>
+                                <p>Clock in: 5:00 PM</p>
+                                <p>Clock out: 10:47 PM</p>
+                            </div>
+                            <div class="center-item">
+                                <h4>Captain America</h4>
+                                <p></p>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="shift-item">
+                            <div class="center-item">
+                                <h4>5:00 PM-11:00 PM</h4>
+                                <p>Clock in: 5:00 PM</p>
+                                <p>Clock out: 10:47 PM</p>
+                            </div>
+                            <div>
+                                <h4>Just Jimmy</h4>
+                                <p></p>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="shift-item">
+                            <div class="center-item">
+                                <h4>5:00 PM-11:00 PM</h4>
+                                <p>Clock in: 5:00 PM</p>
+                                <p>Clock out: 10:47 PM</p>
+                            </div>
+                            <div>
+                                <h4>Beatrice LeBeau</h4>
+                                <p></p>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="shift-item">
+                            <div class="center-item">
+                                <h4>7:00 PM-11:00 PM</h4>
+                                <p>N/A</p>
+                                <!--N/A if unclaimed, No Show if claimed-->
+                            </div>
+                            <div class="center-item">
+                                <h4>Open Shift</h4>
+                                <p>Unclaimed</p>
+                                <!--If open shift is unclaimed by the end of the day, mark as such?-->
+                            </div>
+                            <div></div>
                         </div>
                     </div>
                 </div>
+<!--monthly calendar-->
                 <div class="calendar">
-                    <!--Custom code for this section, API no longer needed (yay).-->
                     <div class="calendar-header">
                         <p><i class="arrow left"></i></p>
                         <h2>January 2023</h2>
@@ -221,6 +326,44 @@
                                 <th>
                                     <h4>Sat</h4>
                                 </th>
+                            </tr>
+                            <tr>
+<!--Each day will toggle a change to the Daily Details when clicked
+    and display any information associated with that day,
+    whether there's a schedule or not.
+    If there is genuinely nothing, Daily Details will need a default message
+    such as "Nothing to Display"-->
+                                <td>
+                                    <h4>1</h4>
+                                    <p>New Year's Day</p>
+                                    <p>Company Holiday</p>
+                                    <div class="av-indicator yellow">
+                                    <!--this will need to be assigned a class to change color
+                                        green = available and scheduled
+                                        yellow = available and not scheduled
+                                        red = unavailable
+                                        colors will change to something more visible/accessible-->
+                                        ●
+                                    <div>
+                                </td>
+                                <td>
+                                    <h4>2</h4>
+                                </td>
+                                <td>
+                                    <h4>3</h4>
+                                </td>
+                                <td>
+                                    <h4>4</h4>
+                                </td>
+                                <td>
+                                    <h4>5</h4>
+                                </td>
+                                <td>
+                                    <h4>6</h4>
+                                </td>
+                                <td>
+                                    <h4>7</h4>
+                                </td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -273,6 +416,7 @@
             </div>
         </div>
     </main>
+</div>
     <!--Scripts for the carousel.-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>

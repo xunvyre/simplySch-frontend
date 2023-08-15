@@ -116,20 +116,21 @@
                 For trades: opens a modal to select a shift to trade, then Send / Nevermind -->
                 <div class="single-shift">
                     <h2>● Thursday, 07/06: 5:00 PM-11:00 PM</h2>
-                    <button id="shift-id-1">Claim Open Shift</button>
+                    <button class="claim-open-shift">Claim Open Shift</button>
                 </div>
                 <div class="single-shift">
                     <h2>● Friday, 07/07: 5:00 PM-11:00 PM</h2>
-                    <button id="trade-id-1">Offer Trade</button>
+                    <button class="offer-trade">Offer Trade</button>
                 </div>
                 <div class="single-shift">
                     <h2>● Friday, 07/07: 5:00 PM-11:00 PM</h2>
-                    <button id="cover-id-1">Claim Cover</button>
+                    <button class="claim-cover">Claim Cover</button>
                 </div>
-                <!--If they're already scheduled for a certain shift, add the "conflict" class and the following title to the single-shift div, and prevent button from activating-->
+                <!--If they're already scheduled for a certain shift, add the "conflict" class and the following title to the single-shift div,
+                    and either remove the class from the button (js relies on the class) or prevent the button from activating w asp-->
                 <div class="single-shift conflict" title="You're already scehduled for this shift.">
                     <h2>● Saturday, 07/08: 11:00 AM-5:00 PM</h2>
-                    <button id="shift-id-2">Claim Open Shift</button>
+                    <button>Claim Open Shift</button>
                 </div>
             </div>
         </div>
@@ -176,5 +177,19 @@
             </div>
         </div>
     </main>
+
+    <dialog id="open-shift-confirm">
+        Claim Shift y/n
+    </dialog>
+
+    <dialog id="claim-cover-confirm">
+        Claim cover y/n
+    </dialog>
+
+    <dialog id="offer-trade">
+        Offer trade y/n
+    </dialog>
+
+    <dialog id=""></dialog>
 </body>
 </html>
