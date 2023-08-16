@@ -77,6 +77,40 @@ nav
     font-weight: var(--weight);
 }
 
+.manager-button, header div button, .profile-button, .weekday-info button, .logout-btn
+{
+    border: none;
+    width: 100%;
+    border-radius: 12px;
+    padding: 1vh 3vw;
+    background-color: var(--blue);
+    color: white;
+    font-size: 1.5vw;
+    transition: var(--click-transition);
+}
+
+.manager-button:hover, header div button:hover, .weekday-info button:hover
+{
+    background-color: grey;
+    cursor: pointer;
+}
+
+.manager-button, .logout-btn
+{
+    font-size: 1vw;
+}
+
+.logout-btn
+{
+    margin-top: 1vh;
+}
+
+.manager-button:hover, .logout-btn:hover
+{
+    color: grey;
+    background-color: white;
+}
+
 .company-info-box
 {
     text-align: center;
@@ -219,24 +253,6 @@ header div
 header div a
 {
     width: 100%;
-}
-
-header div button, .profile-button, .weekday-info button
-{
-    border: none;
-    width: 100%;
-    border-radius: 12px;
-    padding: 1vh 3vw;
-    background-color: var(--blue);
-    color: white;
-    font-size: 1.5vw;
-    transition: var(--click-transition);
-}
-
-header div button:hover, .weekday-info button:hover
-{
-    background-color: grey;
-    cursor: pointer;
 }
 
 /*weekly schedule styles*/
@@ -482,6 +498,11 @@ header div button:hover, .weekday-info button:hover
     position: absolute;
     bottom: 0px;
     left: 2px;
+}
+
+.calendar-body .cal-day-current
+{
+    border: 2px solid var(--blue);
 }
 
 .green
