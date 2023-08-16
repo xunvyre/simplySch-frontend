@@ -358,7 +358,7 @@ header div button:hover, .weekday-info button:hover
     padding: 2px 4px;
     border-radius: 0 0 12px 12px;
     color: grey;
-    max-height: 475px;
+    max-height: 450px;
     overflow-y: auto;
 }
 
@@ -432,8 +432,8 @@ header div button:hover, .weekday-info button:hover
     border-radius: 0 0 12px 12px;
     margin: 0px 10px 10px 10px;
     padding: 2px 10px 10px 10px;
-    min-height: 475px;
-    max-height: 476px;
+    min-height: 450px;
+    max-height: 451px;
     overflow: auto;
 }
 
