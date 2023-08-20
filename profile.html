@@ -137,16 +137,30 @@
         </div>
         <div id="availability">
             <h2 class="section-header">My current availability:</h2>
-            <div class="av-schedule">
-                <h2>● Sunday: All Day</h2>
-                <h2>● Monday: All Day</h2>
-                <h2>● Tuesday: All Day</h2>
-                <h2>● Wednesday: Unavailable</h2>
-                <h2>● Thursday: 5:00 PM-11:00 PM</h2>
-                <h2>● Friday: 9:00 AM-12:00 PM, 3:00 PM-11:00 PM</h2>
-                <h2>● Saturday: All Day</h2>
-                <div class="av-button-holder">
-                    <button id="av-edit">Edit</button>
+            <div class="section-grid">
+                <div class="av-schedule">
+                    <h2>● Sunday: All Day</h2>
+                    <h2>● Monday: All Day</h2>
+                    <h2>● Tuesday: All Day</h2>
+                    <h2>● Wednesday: Unavailable</h2>
+                    <h2>● Thursday: 5:00 PM-11:00 PM</h2>
+                    <h2>● Friday: 9:00 AM-12:00 PM, 3:00 PM-11:00 PM</h2>
+                    <h2>● Saturday: All Day</h2>
+                    <div class="av-button-holder">
+                        <button id="av-edit">Edit</button>
+                    </div>
+                </div>
+                <div class="av-schedule av-pending">
+                    <h2>→ Sunday: All Day</h2>
+                    <h2>→ Monday: All Day</h2>
+                    <h2>→ Tuesday: All Day</h2>
+                    <h2>→ Wednesday: Unavailable</h2>
+                    <h2>→ Thursday: 5:00 PM-11:00 PM</h2>
+                    <h2>→ Friday: 9:00 AM-12:00 PM, 3:00 PM-11:00 PM</h2>
+                    <h2>→ Saturday: All Day</h2>
+                    <div class="av-button-holder">
+                        <button id="av-cancel">Cancel Pending Change</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -179,18 +193,40 @@
         </div>
     </main>
 
-    <dialog id="open-shift-confirm">
-        Claim Shift y/n
-    </dialog>
+    <div id="open-shift-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Claim Open Shift</div>
+            <div class="modal-message">
+                <p>Would you like to claim the open shift on 01/01/2023 from 5:00 PM-10:00 PM?</p>
+                <div class="modal-button-holder">
+                    <button id="open-shift-confirm">Yes, send for approval.</button>
+                    <button id="open-shift-close">Nevermind.</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <dialog id="claim-cover-confirm">
-        Claim cover y/n
-    </dialog>
+    <div id="claim-cover-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Cover a Shift</div>
+            <div class="modal-message">
+                <p>Would you like to cover Sarah's shift on 01/01/2023 from 5:00 PM-10:00 PM?</p>
+                <div class="modal-button-holder">
+                    <button id="cover-shift-confirm">Yes, send for approval.</button>
+                    <button id="cover-shift-close">Nevermind.</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <dialog id="offer-trade">
+    <div id="offer-trade" class="modal">
         Offer trade y/n
-    </dialog>
+    </div>
 
-    <dialog id=""></dialog>
+    <div id="info-edit-dialog" class="modal">
+        Edit Info
+    </div>
+
+    <script src="./assets/js/profile.js"></script>
 </body>
 </html>
