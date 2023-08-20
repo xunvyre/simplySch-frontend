@@ -7,7 +7,7 @@ This is the user-facing side of a scheduling software by SimplySoftware, a famil
 * [Licensing](https://github.com/xunvyre/simplySch-frontend#licensing)
 * [Credits](https://github.com/xunvyre/simplySch-frontend#credits)
 ## Licensing
-[This project is currently covered under copyright laws, and may continue to be covered in the furture. Please refrain from usage.](https://choosealicense.com/no-permission/)
+[This project is currently covered under copyright laws, and may continue to be covered in the future. Please refrain from usage.](https://choosealicense.com/no-permission/)
 ## Future Development
 This project is currently in development.
 ## Credits
