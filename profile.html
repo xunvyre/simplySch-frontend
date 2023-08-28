@@ -48,60 +48,62 @@
             <div class="section-grid">
                 <div class="schedule-list">
                     <div class="schedule-time past-day">
+                        <!--if the day has passed, removed the classes from the buttons-->
                         <h2>● Sunday, 07/02: 11:00 AM-5:00 PM</h2>
                         <div class="weekday-buttons">
-                            <a href="./requests.html"><button>Cover</button></a>
+                            <button>Cover</button>
                             <h2>or</h2>
-                            <a href="./requests.html"><button>Trade</button></a>
+                            <button>Trade</button>
                         </div>
                     </div>
                     <div class="schedule-time past-day">
                         <h2>● Monday, 07/03: 11:00 AM-5:00 PM</h2>
                         <div class="weekday-buttons">
-                            <a href="./requests.html"><button>Cover</button></a>
+                            <button>Cover</button>
                             <h2>or</h2>
-                            <a href="./requests.html"><button>Trade</button></a>
+                            <button>Trade</button>
                         </div>
                     </div>
                     <div class="schedule-time active-day">
                         <h2>● Tuesday, 07/04: 11:00 AM-5:00 PM</h2>
+                        <!--should the ability to request a cover/trade be removed at a certain time if the day is active, for example an hour before the shift?-->
                         <div class="weekday-buttons">
-                            <a href="./requests.html"><button>Cover</button></a>
+                            <button class="req-cover">Cover</button>
                             <h2>or</h2>
-                            <a href="./requests.html"><button>Trade</button></a>
+                            <button class="req-trade">Trade</button>
                         </div>
                     </div>
                     <div class="schedule-time">
                         <h2>● Wednesday, 07/05: Unavailable</h2>
                         <div class="weekday-buttons">
-                            <a href="./requests.html"><button>Cover</button></a>
+                            <button class="req-cover">Cover</button>
                             <h2>or</h2>
-                            <a href="./requests.html"><button>Trade</button></a>
+                            <button class="req-trade">Trade</button>
                         </div>
                         <!--Do you think we should distinguish between types of days off? Such as: Off, Not Scheduled, Unavailable, Company Holiday-->
                     </div>
                     <div class="schedule-time">
                         <h2>● Thursday, 07/06: Off</h2>
                         <div class="weekday-buttons">
-                            <a href="./requests.html"><button>Cover</button></a>
+                            <button class="req-cover">Cover</button>
                             <h2>or</h2>
-                            <a href="./requests.html"><button>Trade</button></a>
+                            <button class="req-trade">Trade</button>
                         </div>
                     </div>
                     <div class="schedule-time">
                         <h2>● Friday, 07/07: Off</h2>
                         <div class="weekday-buttons">
-                            <a href="./requests.html"><button>Cover</button></a>
+                            <button class="req-cover">Cover</button>
                             <h2>or</h2>
-                            <a href="./requests.html"><button>Trade</button></a>
+                            <button class="req-trade">Trade</button>
                         </div>
                     </div>
                     <div class="schedule-time">
                         <h2>● Saturday, 07/08: 11:00 AM-5:00 PM, 5:00 PM-11:00 PM</h2>
                         <div class="weekday-buttons">
-                            <a href="./requests.html"><button>Cover</button></a>
+                            <button class="req-cover">Cover</button>
                             <h2>or</h2>
-                            <a href="./requests.html"><button>Trade</button></a>
+                            <button class="req-trade">Trade</button>
                         </div>
                     </div>
                 </div>
@@ -193,6 +195,44 @@
         </div>
     </main>
 
+<!--............................................................modals-->
+<!--request modals-->
+    <div id="req-cover-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Request a Cover</div>
+            <div class="modal-message">
+                <p>Would you like to request a cover for your shift on 01/01/2023 from 11:00 AM-5:00 PM?</p>
+                <label class="modal-disclaimer">
+                    <input type="checkbox" id="req-cover-msg" />
+                    By checking this box, you are confirming your understanding that you are still responsible for this shift up until it is claimed by another employee. 
+                    If you are completely unavailable for this shift, please update your availability, request time off, or speak with management regarding this shift.
+                </label>
+                <div class="modal-button-holder">
+                    <button id="req-cover-confirm">Yes, request a cover.</button>
+                    <button id="req-cover-close">Nevermind.</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="req-trade-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Request a Trade</div>
+            <div class="modal-message">
+                <p>Would you like to request to trade your shift (01/01/2023 from 11:00 AM-5:00 PM) for a different employee's shift?</p>
+                <label class="modal-disclaimer">
+                    <input type="checkbox" id="req-trade-msg" />
+                    By checking this box, you are confirming your understanding that you are still responsible for this shift up until it is claimed by another employee. 
+                    If you are completely unavailable for this shift, please update your availability, request time off, or speak with management regarding this shift.
+                </label>
+                <div class="modal-button-holder">
+                    <button id="req-trade-confirm">Yes, request a trade.</button>
+                    <button id="req-trade-close">Nevermind.</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--claim shift modals-->
     <div id="open-shift-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">Claim Open Shift</div>
@@ -219,12 +259,72 @@
         </div>
     </div>
 
-    <div id="offer-trade" class="modal">
-        Offer trade y/n
+    <div id="offer-trade-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Offer Trade</div>
+            <div class="modal-message">
+                <p>Select shift(s) to trade:</p>
+                <ul class="modal-list">
+                    <li>
+                        <label>
+                            <input type="checkbox" />
+                            One Shift
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" />
+                            Two Shift
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" />
+                            Red Shift
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" />
+                            Blue Shift
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" />
+                            Old Shift
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" />
+                            New Shift
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" />
+                            Last Shift
+                        </label>
+                    </li>
+                </ul>
+                <!--once a shift is selected-->
+                <p id="trade-message">Please select a shift to trade for Sarah's shift on 01/01/2023 from 5:00 PM-10:00 PM.</p>
+                <div class="modal-button-holder">
+                    <button id="trade-shift-confirm">Yes, offer trade.</button>
+                    <button id="trade-shift-clear">Clear selection.</button>
+                </div>
+                <button class="modal-close-button" id="trade-shift-close">Nevermind.</button>
+            </div>
+        </div>
+    </div>
+<!--edit info modals-->
+    <div id="info-edit-modal" class="modal">
+        Edit Info
     </div>
 
-    <div id="info-edit-dialog" class="modal">
-        Edit Info
+    <div id="av-edit-modal" class="modal">
+        Edit AV info
     </div>
 
     <script src="./assets/js/profile.js"></script>

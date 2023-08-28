@@ -70,7 +70,7 @@ nav ul li a
     font-size: 3vh;
 }
 
-nav ul li a, .weekday-buttons button, .single-shift button, #availability button, #time-off button, #info button, .modal-button-holder #open-shift-confirm, .modal-button-holder button
+nav ul li a, .weekday-buttons button, .single-shift button, #availability button, #time-off button, #info button, .modal-button-holder button, .modal-close-button
 {
     display: inline-block;
     border: none;
@@ -189,9 +189,9 @@ main header h1 span
     width: 250px;
 }
 
-.weekday-buttons button:hover, .single-shift button:hover, .modal-button-holder button:hover
+.weekday-buttons button:hover, .single-shift button:hover, .modal-button-holder button:hover, #availability button:hover, .request-toff:hover, #info-edit:hover, .modal-close-button:hover
 {
-    background-color: grey;
+    background-color: grey !important;
     cursor: pointer;
 }
 
@@ -290,6 +290,11 @@ main header h1 span
     padding: 5px 0px;
 }
 
+.working
+{
+    display: inline-block;
+}
+
 .modal-message
 {
     background-color: white;
@@ -303,11 +308,40 @@ main header h1 span
 .modal-button-holder
 {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 5px;
 }
 
 .modal-button-holder button
 {
     width: 100% !important;
+}
+
+.modal-close-button
+{
+    width: 100%;
+    margin-top: 1vh;
+}
+
+.modal-list
+{
+    max-height: 150px;
+    overflow: auto;
+}
+
+.modal-list li
+{
+    margin: 5px;
+}
+
+.modal-list input
+{
+    height: 25px;
+    width: 25px;
+}
+
+.modal-disclaimer
+{
+    display: inline-block;
+    font-size: 12px;
 }
