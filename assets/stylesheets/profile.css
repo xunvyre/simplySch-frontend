@@ -195,6 +195,17 @@ main header h1 span
     cursor: pointer;
 }
 
+.claimed
+{
+    opacity: 50%;
+}
+
+.claimed button
+{
+    background-color: grey;
+    cursor: not-allowed !important;
+}
+
 .active-day h2
 {
     color: var(--blue);
@@ -274,7 +285,7 @@ main header h1 span
 .modal-content
 {
     background-color: grey;
-    margin: 15% auto;
+    margin: 10% auto;
     border-radius: 12px;
     width: 50%;
     padding-bottom: 10px;
@@ -340,8 +351,147 @@ main header h1 span
     width: 25px;
 }
 
+.modal-option
+{
+    display: inline-block;
+    font-size: 16px;
+}
+
 .modal-disclaimer
 {
     display: inline-block;
     font-size: 12px;
+}
+
+.modal-edit-list
+{
+    margin: 5px 0px;
+}
+
+.modal-edit-list li
+{
+    display: grid;
+    grid-template-columns: 150px auto;
+    align-items: center;
+}
+
+.modal input
+{
+    font-size: 14pt;
+    color: var(--blue);
+    padding: 2px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 2px solid grey;
+}
+
+.modal-edit-list input
+{
+    width: 75%;
+}
+
+.modal input:focus
+{
+   outline: 3px solid var(--blue);
+}
+
+.modal-av-edit li
+{
+    display: grid;
+    grid-template-columns: 175px auto;
+    align-items: center;
+    padding: 2px 0px;
+    border-bottom: 2px solid grey;
+}
+
+.modal-av-edit li:last-child
+{
+    border-bottom: none;
+}
+
+.modal-av-edit label
+{
+    display: none;
+}
+
+.modal-av-edit li div
+{
+    display: grid;
+    grid-template-columns: 40% 30px 40% 30px;
+    gap: 0px;
+    align-items: center;
+}
+
+.modal-av-edit input
+{
+    width: inherit;
+}
+
+.av-add-button
+{
+    color: var(--blue);
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.single-option
+{
+    display: grid;
+    grid-template-columns: 10px auto;
+    align-items: center;
+}
+
+.single-option-msg
+{
+    margin-left: 1.5vw;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: grey;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.single-option h2
+{
+    color: var(--blue);
+}
+
+.single-option-msg p
+{
+    color: white;
+}
+
+.shift-trade-option-btns
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.shift-trade-option-btns button:hover
+{
+    background-color: white !important;
+    color: grey;
+}
+
+#shift-tracker .single-option button
+{
+    font-size: 18px;
+    width: 100%;
+}
+
+#confirm-modal .modal-button-holder
+{
+    grid-template-columns: 1fr;
+    margin-top: 5px;
+}
+
+#confirm-modal .modal-content
+{
+    width: 25%;
+    text-align: center;
 }

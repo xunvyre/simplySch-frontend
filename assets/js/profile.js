@@ -31,6 +31,10 @@ const tradeShiftConfirmBtn = document.getElementById("trade-shift-confirm");
 const tradeShiftClearBtn = document.getElementById("trade-shift-clear");
 const tradeShiftCloseBtn = document.getElementById("trade-shift-close");
 
+//confirmation modal variables
+const confirmModal = document.getElementById("confirm-modal");
+const confirmOkayBtn = document.getElementById("confirm-modal-button");
+
 //request cover visual functions
 
 function coverReqActivate()
@@ -40,8 +44,16 @@ function coverReqActivate()
 
 function coverReqConfirm()
 {
-    //if coverReqDisclaimer checked then close, else throw alert
-    console.log("Nothing to see here.")
+    if(coverReqDisclaimer.checked === true)
+    {
+        coverReqModal.style.display = "none";
+        coverReqDisclaimer.checked = false;
+        confirmModalActivate();
+    }
+    else
+    {
+        alert("Please acknowledge the disclaimer before placing your request.")
+    }
 };
 
 function coverReqClose()
@@ -149,6 +161,18 @@ getTradeShiftBtns.forEach((btn) =>
     btn.addEventListener("click", tradeShiftActivate)
 });
 
+//confirmation
+
+function confirmModalActivate()
+{
+    confirmModal.style.display = "inline-block";
+};
+
+function confirmModalClose()
+{
+    confirmModal.style.display = "none";
+};
+
 //function calls
 coverReqConfirmBtn.addEventListener("click", coverReqConfirm);
 coverReqCloseBtn.addEventListener("click", coverReqClose);
@@ -161,3 +185,4 @@ coverShiftCloseBtn.addEventListener("click", coverShiftClose);
 tradeShiftConfirmBtn.addEventListener("click", tradeShiftConfirm);
 tradeShiftClearBtn.addEventListener("click", tradeShiftClear);
 tradeShiftCloseBtn.addEventListener("click", tradeShiftClose);
+confirmOkayBtn.addEventListener("click", confirmModalClose);
